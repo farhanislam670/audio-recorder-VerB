@@ -72,7 +72,7 @@ const AudioRecorder = () => {
           ) : null}
           {recordingStatus === "recording" ? (
             <button onMouseUp={stopRecording} type="button">
-              Stop Recording
+              Recording in Progress
             </button>
           ) : null}
           {recordingStatus !== "recording" && audio ? (
