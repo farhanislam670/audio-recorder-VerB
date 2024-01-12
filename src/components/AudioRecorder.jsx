@@ -66,18 +66,18 @@ const AudioRecorder = () => {
             </button>
           ) : null}
           {permission && recordingStatus === "inactive" ? (
-            <button onClick={startRecording} type="button">
+            <button onMouseDown={startRecording} type="button">
               Start Recording
             </button>
           ) : null}
           {recordingStatus === "recording" ? (
-            <button onClick={stopRecording} type="button">
+            <button onMouseUp={stopRecording} type="button">
               Stop Recording
             </button>
           ) : null}
-          {audio ? (
+          {recordingStatus !== "recording" && audio ? (
             <div className="audio-container">
-              <audio src={audio} controls></audio>
+              <audio src={audio} controls className="center-audio"></audio>
               <a download href={audio}>
                 Download Recording
               </a>

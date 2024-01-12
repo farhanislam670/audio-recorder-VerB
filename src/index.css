@@ -79,4 +79,10 @@ button:focus-visible {
 .audio-container {
   display: flex;
   flex-direction: column;
+  margin-top: 25px;
+}
+
+.center-audio {
+  display: block;
+  margin: 0 auto;
 }
